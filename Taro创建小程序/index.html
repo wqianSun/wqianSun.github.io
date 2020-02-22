@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">css中常见的定位方式 | wqianSun</title>
+  <title itemprop="name">Taro创建小程序 | wqianSun</title>
   
     <link rel="shortcut icon" href="images/favicon.ico">
   
@@ -384,20 +384,41 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
           <header class="entry-header">
-            <h1 class="entry-title">css中常见的定位方式</h1>
+            <h1 class="entry-title">Taro创建小程序</h1>
             <p class="entry-census">&nbsp;·&nbsp;wqianSun&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
 
             <hr>
           </header>
         
         <div class="entry-content">
-          <h2 id="CSS-的四种定位方式（position）"><a href="#CSS-的四种定位方式（position）" class="headerlink" title="CSS 的四种定位方式（position）"></a>CSS 的四种定位方式（position）</h2><ul>
-<li>静态定位（默认） static</li>
-<li>相对定位 relative</li>
-<li>绝对定位 absolute</li>
-<li>固定定位 fixed</li>
-</ul>
-<h3 id="static-默认定位"><a href="#static-默认定位" class="headerlink" title="static:默认定位"></a>static:默认定位</h3><h4 id="1-static-表示没有定位，或者说不算具有定位属性。"><a href="#1-static-表示没有定位，或者说不算具有定位属性。" class="headerlink" title="1. static 表示没有定位，或者说不算具有定位属性。"></a>1. static 表示没有定位，或者说不算具有定位属性。</h4><h4 id="2-如果元素-position-属性值为-static（或者未设-position-属性），该元素出现在正常的流中（忽略-top-bottom-left-right-或者-z-index-声明）"><a href="#2-如果元素-position-属性值为-static（或者未设-position-属性），该元素出现在正常的流中（忽略-top-bottom-left-right-或者-z-index-声明）" class="headerlink" title="2. 如果元素 position 属性值为 static（或者未设 position 属性），该元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）"></a>2. 如果元素 position 属性值为 static（或者未设 position 属性），该元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）</h4><h3 id="relative-相对定位"><a href="#relative-相对定位" class="headerlink" title="relative:相对定位"></a>relative:相对定位</h3><h4 id="1-static-表示没有定位，或者说不算具有定位属性。-1"><a href="#1-static-表示没有定位，或者说不算具有定位属性。-1" class="headerlink" title="1. static 表示没有定位，或者说不算具有定位属性。"></a>1. static 表示没有定位，或者说不算具有定位属性。</h4><h4 id="2-如果元素-position-属性值为-static（或者未设-position-属性），该元素出现在正常的流中（忽略-top-bottom-left-right-或者-z-index-声明）-1"><a href="#2-如果元素-position-属性值为-static（或者未设-position-属性），该元素出现在正常的流中（忽略-top-bottom-left-right-或者-z-index-声明）-1" class="headerlink" title="2. 如果元素 position 属性值为 static（或者未设 position 属性），该元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）"></a>2. 如果元素 position 属性值为 static（或者未设 position 属性），该元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）</h4>
+          <h2 id="小程序的开发优势"><a href="#小程序的开发优势" class="headerlink" title="小程序的开发优势"></a>小程序的开发优势</h2><ol>
+<li>用安装，即开即用，用完就走。省流量，省安装时间，不占用桌面。</li>
+<li>对于小程序开发者来说，开发成本低，开发者可以有更多财力，人力，精力放在产品本身。</li>
+<li>对于用户来说，保护隐私，降低低频率 App 使用门槛，减少线下服务等待时间，满足用户个性化需求，小程序的操作流程更统一。</li>
+</ol>
+<h1 id="利用-taro-创建小程序的步骤"><a href="#利用-taro-创建小程序的步骤" class="headerlink" title="利用 taro 创建小程序的步骤"></a>利用 taro 创建小程序的步骤</h1><h2 id="第一步-全局安装脚手架"><a href="#第一步-全局安装脚手架" class="headerlink" title="第一步 全局安装脚手架"></a>第一步 全局安装脚手架</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 使用 npm 安装 CLI</span><br><span class="line">$ npm install -g @tarojs/cli</span><br><span class="line"></span><br><span class="line">2. OR 使用 yarn 安装 CLI</span><br><span class="line">$ yarn global add @tarojs/cli</span><br><span class="line"></span><br><span class="line">3. OR 安装了 cnpm，使用 cnpm 安装 CLI</span><br><span class="line">$ cnpm install -g @tarojs/cli</span><br></pre></td></tr></table></figure>
+
+<h4 id="我个人更推荐使用第三种方式使用-cnpm-安装脚手架"><a href="#我个人更推荐使用第三种方式使用-cnpm-安装脚手架" class="headerlink" title="我个人更推荐使用第三种方式使用 cnpm 安装脚手架"></a>我个人更推荐使用第三种方式使用 cnpm 安装脚手架</h4><h4 id="脚手架搭建完成后建议利用命令检查脚手架是否搭建成功"><a href="#脚手架搭建完成后建议利用命令检查脚手架是否搭建成功" class="headerlink" title="脚手架搭建完成后建议利用命令检查脚手架是否搭建成功"></a>脚手架搭建完成后建议利用命令检查脚手架是否搭建成功</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ taro -V</span><br></pre></td></tr></table></figure>
+
+<p>使用这个命令如果成功会出现例如以下图片样式的版本号提示</p>
+<blockquote>
+<p><img src="../blogImg/03.png" alt="avatar"></p>
+</blockquote>
+<h2 id="第二步-创建项目"><a href="#第二步-创建项目" class="headerlink" title="第二步 创建项目"></a>第二步 创建项目</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建命令</span></span><br><span class="line"></span><br><span class="line">$ taro init 项目名</span><br><span class="line"></span><br><span class="line">**不建议在此处使用 npx 创建**</span><br></pre></td></tr></table></figure>
+
+<h2 id="第三步-创建项目步骤基本过程"><a href="#第三步-创建项目步骤基本过程" class="headerlink" title="第三步 创建项目步骤基本过程"></a>第三步 创建项目步骤基本过程</h2><blockquote>
+<p><img src="../blogImg/04.png" alt="avatar"></p>
+</blockquote>
+<h4 id="提示！css-预处理器和模板可以根据个人需要进行选择"><a href="#提示！css-预处理器和模板可以根据个人需要进行选择" class="headerlink" title="提示！css 预处理器和模板可以根据个人需要进行选择"></a>提示！css 预处理器和模板可以根据个人需要进行选择</h4><h2 id="第四步-小程序创建完毕可以使用命令开始运行"><a href="#第四步-小程序创建完毕可以使用命令开始运行" class="headerlink" title="第四步 小程序创建完毕可以使用命令开始运行"></a>第四步 小程序创建完毕可以使用命令开始运行</h2><h5 id="运行到浏览器端"><a href="#运行到浏览器端" class="headerlink" title="运行到浏览器端"></a>运行到浏览器端</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm run dev:h5</span><br><span class="line"></span><br><span class="line">$ npm run build:h5</span><br></pre></td></tr></table></figure>
+
+<h5 id="运行微信小程序"><a href="#运行微信小程序" class="headerlink" title="运行微信小程序"></a>运行微信小程序</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm run dev:weapp</span><br><span class="line"></span><br><span class="line">$ npm run build:weapp</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意！！！如果安装项目出现依赖项安装失败提示手动安装时，请使用如下命令安装依赖项"><a href="#注意！！！如果安装项目出现依赖项安装失败提示手动安装时，请使用如下命令安装依赖项" class="headerlink" title="注意！！！如果安装项目出现依赖项安装失败提示手动安装时，请使用如下命令安装依赖项"></a>注意！！！如果安装项目出现依赖项安装失败提示手动安装时，请使用如下命令安装依赖项</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 使用 npm 安装 依赖项</span><br><span class="line">$ npm i</span><br><span class="line"></span><br><span class="line">2. OR 使用 yarn 安装 依赖项</span><br><span class="line">$ yarn i</span><br><span class="line"></span><br><span class="line">3. OR 安装了 cnpm，使用 cnpm 安装 依赖项</span><br><span class="line">$ cnpm i</span><br></pre></td></tr></table></figure>
+
+<h4 id="如果使用-npm-安装依赖项出现以下报错方式-建议使用-cnpm-安装依赖项"><a href="#如果使用-npm-安装依赖项出现以下报错方式-建议使用-cnpm-安装依赖项" class="headerlink" title="如果使用 npm 安装依赖项出现以下报错方式,建议使用 cnpm 安装依赖项"></a>如果使用 npm 安装依赖项出现以下报错方式,建议使用 cnpm 安装依赖项</h4><blockquote>
+<p><img src="../blogImg/05.png" alt="avatar"> <img src="../blogImg/06.png" alt="avatar"></p>
+</blockquote>
+<h6 id="疫情期间，逆战即迎战，加油！"><a href="#疫情期间，逆战即迎战，加油！" class="headerlink" title="疫情期间，逆战即迎战，加油！"></a>疫情期间，逆战即迎战，加油！</h6>
         </div>
         <!-- .entry-content -->
         <div class="single-reward">
@@ -425,23 +446,23 @@
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
+        
           
-            <div class="post-nepre full previous">
+            <div class="post-nepre full next">
           
-            <a href="/hello-world/" rel="prev">
+            <a href="/%E5%8E%BB%E9%87%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
               </div>
               <span class="label">
-              Previous Post</span>
+              Next Post</span>
               <div class="info">
                 <h3>
-                Hello World</h3>
+                去重的几种方式</h3>
                 <hr>
               </div>
             </a>
           </div>
-        
         
       </section>
       
