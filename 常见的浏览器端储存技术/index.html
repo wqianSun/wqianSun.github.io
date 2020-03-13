@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Taro创建小程序 | wqianSun</title>
+  <title itemprop="name">常见的浏览器端储存技术 | wqianSun</title>
   
     <link rel="shortcut icon" href="images/favicon.ico">
   
@@ -384,41 +384,59 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
           <header class="entry-header">
-            <h1 class="entry-title">Taro创建小程序</h1>
+            <h1 class="entry-title">常见的浏览器端储存技术</h1>
             <p class="entry-census">&nbsp;·&nbsp;wqianSun&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
 
             <hr>
           </header>
         
         <div class="entry-content">
-          <h2 id="小程序的开发优势"><a href="#小程序的开发优势" class="headerlink" title="小程序的开发优势"></a>小程序的开发优势</h2><ol>
-<li>用安装，即开即用，用完就走。省流量，省安装时间，不占用桌面。</li>
-<li>对于小程序开发者来说，开发成本低，开发者可以有更多财力，人力，精力放在产品本身。</li>
-<li>对于用户来说，保护隐私，降低低频率 App 使用门槛，减少线下服务等待时间，满足用户个性化需求，小程序的操作流程更统一。</li>
-</ol>
-<h1 id="利用-taro-创建小程序的步骤"><a href="#利用-taro-创建小程序的步骤" class="headerlink" title="利用 taro 创建小程序的步骤"></a>利用 taro 创建小程序的步骤</h1><h2 id="第一步-全局安装脚手架"><a href="#第一步-全局安装脚手架" class="headerlink" title="第一步 全局安装脚手架"></a>第一步 全局安装脚手架</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 使用 npm 安装 CLI</span><br><span class="line">$ npm install -g @tarojs/cli</span><br><span class="line"></span><br><span class="line">2. OR 使用 yarn 安装 CLI</span><br><span class="line">$ yarn global add @tarojs/cli</span><br><span class="line"></span><br><span class="line">3. OR 安装了 cnpm，使用 cnpm 安装 CLI</span><br><span class="line">$ cnpm install -g @tarojs/cli</span><br></pre></td></tr></table></figure>
-
-<h4 id="我个人更推荐使用第三种方式使用-cnpm-安装脚手架"><a href="#我个人更推荐使用第三种方式使用-cnpm-安装脚手架" class="headerlink" title="我个人更推荐使用第三种方式使用 cnpm 安装脚手架"></a>我个人更推荐使用第三种方式使用 cnpm 安装脚手架</h4><h4 id="脚手架搭建完成后建议利用命令检查脚手架是否搭建成功"><a href="#脚手架搭建完成后建议利用命令检查脚手架是否搭建成功" class="headerlink" title="脚手架搭建完成后建议利用命令检查脚手架是否搭建成功"></a>脚手架搭建完成后建议利用命令检查脚手架是否搭建成功</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ taro -V</span><br></pre></td></tr></table></figure>
-
-<p>使用这个命令如果成功会出现例如以下图片样式的版本号提示</p>
-<blockquote>
-<p><img src="../blogImg/03.png" alt="avatar"></p>
+          <h4 id="我们常见的浏览器端储存技术主要有两种：cookie、webStorage-localStorage-和-sessionStorage"><a href="#我们常见的浏览器端储存技术主要有两种：cookie、webStorage-localStorage-和-sessionStorage" class="headerlink" title="我们常见的浏览器端储存技术主要有两种：cookie、webStorage(localStorage 和 sessionStorage)"></a>我们常见的浏览器端储存技术主要有两种：cookie、webStorage(localStorage 和 sessionStorage)</h4><hr>
+<h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><blockquote>
+<p>cookie 英文饼干，顾名思义，大小应该非常小，cookie 非常小，它的大小限制在 4kb 左右，是网景公司的前雇员在 1993 年发明。它的主要用于保存登陆信息，比如你登陆某个网站市场可以看到’记住密码’,这就是通过在 cookie 中存入一段辨别用户身份的数据来实现的。</p>
 </blockquote>
-<h2 id="第二步-创建项目"><a href="#第二步-创建项目" class="headerlink" title="第二步 创建项目"></a>第二步 创建项目</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建命令</span></span><br><span class="line"></span><br><span class="line">$ taro init 项目名</span><br><span class="line"></span><br><span class="line">**不建议在此处使用 npx 创建**</span><br></pre></td></tr></table></figure>
-
-<h2 id="第三步-创建项目步骤基本过程"><a href="#第三步-创建项目步骤基本过程" class="headerlink" title="第三步 创建项目步骤基本过程"></a>第三步 创建项目步骤基本过程</h2><blockquote>
-<p><img src="../blogImg/04.png" alt="avatar"></p>
+<hr>
+<h3 id="webStorage-主要分为-localStorage-和-sessionStorage"><a href="#webStorage-主要分为-localStorage-和-sessionStorage" class="headerlink" title="webStorage 主要分为 localStorage 和 sessionStorage"></a>webStorage 主要分为 localStorage 和 sessionStorage</h3><h2 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h2><blockquote>
+<p>localStorage 是 HTML5 标准中新加入的技术，它并不是什么划时代的新东西。早在 IE 6 时代，就有一个叫 userData 的东西用于本地存储，而当时考虑到浏览器兼容性，更通用的方案是使用 Flash。而如今，localStorage 被大多数浏览器所支持，如果你的网站需要支持 IE6+，那以 userData 作为你的 polyfill 的方案是种不错的选择。</p>
 </blockquote>
-<h4 id="提示！css-预处理器和模板可以根据个人需要进行选择"><a href="#提示！css-预处理器和模板可以根据个人需要进行选择" class="headerlink" title="提示！css 预处理器和模板可以根据个人需要进行选择"></a>提示！css 预处理器和模板可以根据个人需要进行选择</h4><h2 id="第四步-小程序创建完毕可以使用命令开始运行"><a href="#第四步-小程序创建完毕可以使用命令开始运行" class="headerlink" title="第四步 小程序创建完毕可以使用命令开始运行"></a>第四步 小程序创建完毕可以使用命令开始运行</h2><h5 id="运行到浏览器端"><a href="#运行到浏览器端" class="headerlink" title="运行到浏览器端"></a>运行到浏览器端</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm run dev:h5</span><br><span class="line"></span><br><span class="line">$ npm run build:h5</span><br></pre></td></tr></table></figure>
-
-<h5 id="运行微信小程序"><a href="#运行微信小程序" class="headerlink" title="运行微信小程序"></a>运行微信小程序</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm run dev:weapp</span><br><span class="line"></span><br><span class="line">$ npm run build:weapp</span><br></pre></td></tr></table></figure>
-
-<h3 id="注意！！！如果安装项目出现依赖项安装失败提示手动安装时，请使用如下命令安装依赖项"><a href="#注意！！！如果安装项目出现依赖项安装失败提示手动安装时，请使用如下命令安装依赖项" class="headerlink" title="注意！！！如果安装项目出现依赖项安装失败提示手动安装时，请使用如下命令安装依赖项"></a>注意！！！如果安装项目出现依赖项安装失败提示手动安装时，请使用如下命令安装依赖项</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 使用 npm 安装 依赖项</span><br><span class="line">$ npm i</span><br><span class="line"></span><br><span class="line">2. OR 使用 yarn 安装 依赖项</span><br><span class="line">$ yarn i</span><br><span class="line"></span><br><span class="line">3. OR 安装了 cnpm，使用 cnpm 安装 依赖项</span><br><span class="line">$ cnpm i</span><br></pre></td></tr></table></figure>
-
-<h4 id="如果使用-npm-安装依赖项出现以下报错方式-建议使用-cnpm-安装依赖项"><a href="#如果使用-npm-安装依赖项出现以下报错方式-建议使用-cnpm-安装依赖项" class="headerlink" title="如果使用 npm 安装依赖项出现以下报错方式,建议使用 cnpm 安装依赖项"></a>如果使用 npm 安装依赖项出现以下报错方式,建议使用 cnpm 安装依赖项</h4><blockquote>
-<p><img src="../blogImg/05.png" alt="avatar"> <img src="../blogImg/06.png" alt="avatar"></p>
+<hr>
+<h2 id="sessionStorage"><a href="#sessionStorage" class="headerlink" title="sessionStorage"></a>sessionStorage</h2><blockquote>
+<p>sessionStorage 与 localStorage 的接口类似，但保存数据的生命周期与 localStorage 不同。Session 这个词的意思，直译过来是“会话”。而 sessionStorage 是一个前端的概念，它只是可以将一部分数据在当前会话中保存下来，刷新页面数据依旧存在。但当页面关闭后，sessionStorage 中的数据就会被清空。</p>
 </blockquote>
-
+<hr>
+<h4 id="三者异同"><a href="#三者异同" class="headerlink" title="三者异同"></a>三者异同</h4><h2 id="数据上的生命周期的不同"><a href="#数据上的生命周期的不同" class="headerlink" title="数据上的生命周期的不同"></a>数据上的生命周期的不同</h2><ul>
+<li><p>Cookie 一般由服务器生成，可设置失效时间，如果在浏览器端生成 cookie，默认是关闭后失效。</p>
+</li>
+<li><p>localStorage 除非被永久清除，否则永久保存。</p>
+</li>
+<li><p>sessionStorage 仅在当前会话会有效，关闭页面或浏览器后被清除</p>
+</li>
+</ul>
+<h2 id="存放数据的大小不同"><a href="#存放数据的大小不同" class="headerlink" title="存放数据的大小不同"></a>存放数据的大小不同</h2><ul>
+<li><p>Cookie 一般为 4kb</p>
+</li>
+<li><p>localStorage 和 sessionStorage 一般为 5mb</p>
+</li>
+</ul>
+<h2 id="与服务器端通信不同"><a href="#与服务器端通信不同" class="headerlink" title="与服务器端通信不同"></a>与服务器端通信不同</h2><ul>
+<li><p>Cookie 每次都会携带 HTTP 头中，如果使用 cookie 保存过多数据会带来性能问题</p>
+</li>
+<li><p>localStorage 和 sessionStorage 仅在客户端（即浏览器）中保存，不参与和服务器的通信</p>
+</li>
+</ul>
+<h2 id="易用性"><a href="#易用性" class="headerlink" title="易用性"></a>易用性</h2><ul>
+<li><p>Cookie 需要程序员自己来封装，原生的 cookie 接口不够友好</p>
+</li>
+<li><p>localStorage 和 sessionStorage 原生接口可以接受，可以封装来对 Object 和 Array 有更好的支持</p>
+</li>
+</ul>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><ul>
+<li><p>因为考虑到每个 HTTP 请求都会带着 Cookie 的信息，所以 Cookie 当然是能精简就精简，比较常用的一个应用场景就是判断用户是否登录。针对登录过的用户，服务器端会在他登录时往 Cookie 中插入一段加密过的唯一辨识单一用户的辨识码，下次只要读取这个值就可以判断当前用户是否登录。Cookie 还可以用来保存用户在电商网站的购物车信息。</p>
+</li>
+<li><p>localStorage 接替了 Cookie 管理购物车的工作，同时也能胜任其他一些工作。比如 HTML5 游戏通常会产生一些本地数据，localStorage 也是非常适用的。如果遇到一些内容特别多的表单，为了优化用户体验，我们可能要把表单页面拆分成多个子页面，然后按步骤引导用户填写。这时候 sessionStorage 的作用就发挥出来了。</p>
+</li>
+</ul>
+<h4 id="安全性的考虑"><a href="#安全性的考虑" class="headerlink" title="安全性的考虑"></a>安全性的考虑</h4><h5 id="需要注意的是，不是什么数据都适合放在-Cookie、localStorage-和-sessionStorage-中的。使用它们的时候，需要时刻注意是否有代码存在-XSS-注入的风险。因为只要打开控制台，你就随意修改它们的值，也就是说如果你的网站中有-XSS-的风险，它们就能对你的-localStorage-肆意妄为。所以千万不要用它们存储你系统中的敏感数据。"><a href="#需要注意的是，不是什么数据都适合放在-Cookie、localStorage-和-sessionStorage-中的。使用它们的时候，需要时刻注意是否有代码存在-XSS-注入的风险。因为只要打开控制台，你就随意修改它们的值，也就是说如果你的网站中有-XSS-的风险，它们就能对你的-localStorage-肆意妄为。所以千万不要用它们存储你系统中的敏感数据。" class="headerlink" title="需要注意的是，不是什么数据都适合放在 Cookie、localStorage 和 sessionStorage 中的。使用它们的时候，需要时刻注意是否有代码存在 XSS 注入的风险。因为只要打开控制台，你就随意修改它们的值，也就是说如果你的网站中有 XSS 的风险，它们就能对你的 localStorage 肆意妄为。所以千万不要用它们存储你系统中的敏感数据。"></a>需要注意的是，不是什么数据都适合放在 Cookie、localStorage 和 sessionStorage 中的。使用它们的时候，需要时刻注意是否有代码存在 XSS 注入的风险。因为只要打开控制台，你就随意修改它们的值，也就是说如果你的网站中有 XSS 的风险，它们就能对你的 localStorage 肆意妄为。所以千万不要用它们存储你系统中的敏感数据。</h5>
         </div>
         <!-- .entry-content -->
         <div class="single-reward">
@@ -449,7 +467,7 @@
           
             <div class="post-nepre half previous">
           
-            <a href="/mackdown/" rel="prev">
+            <a href="/Taro%E5%88%9B%E5%BB%BA%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="prev">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
               </div>
@@ -457,7 +475,7 @@
               Previous Post</span>
               <div class="info">
                 <h3>
-                mackdown</h3>
+                Taro创建小程序</h3>
                 <hr>
               </div>
             </a>
@@ -467,7 +485,7 @@
           
             <div class="post-nepre half next">
           
-            <a href="/%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B5%8F%E8%A7%88%E5%99%A8%E7%AB%AF%E5%82%A8%E5%AD%98%E6%8A%80%E6%9C%AF/" rel="next">
+            <a href="/%E5%8E%BB%E9%87%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
               </div>
@@ -475,7 +493,7 @@
               Next Post</span>
               <div class="info">
                 <h3>
-                常见的浏览器端储存技术</h3>
+                去重的几种方式</h3>
                 <hr>
               </div>
             </a>
